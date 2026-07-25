@@ -163,5 +163,5 @@ document.getElementById('contactForm').addEventListener('submit', (e) => {
 
   const text = `*🔔 New Enquiry from Kingsley Jackson Consults website*%0A%0A*Name* ➡ ${encodeURIComponent(name)}%0A*Email* ➡ ${encodeURIComponent(email)}%0A*Phone* ➡ ${encodeURIComponent(phone)}%0A*Message* ➡ ${encodeURIComponent(message)}`;
 
-  window.open(`https://wa.me/2348060776650?text=${text}`, '_blank');
+  window.open(`https://wa.me/2348080730351?text=${text}`, '_blank');
 });
