@@ -1,3 +1,8 @@
+// AOS Init
+try {
+  AOS.init({ duration: 600, once: true, offset: 80 });
+} catch (e) { console.warn('AOS failed:', e); }
+
 try {
   var swiper = new Swiper('.swiper-container', {
     loop: true,
@@ -77,6 +82,75 @@ document.querySelectorAll('.faq-question').forEach((btn) => {
     }
   });
 });
+
+// Animated Counters
+(function() {
+  const counters = document.querySelectorAll('.stat-number');
+  if (!counters.length) return;
+
+  const animateCounter = (el) => {
+    const target = parseInt(el.getAttribute('data-target'), 10);
+    const increment = Math.ceil(target / 40);
+    let current = 0;
+
+    const update = () => {
+      current += increment;
+      if (current >= target) {
+        el.textContent = target;
+        return;
+      }
+      el.textContent = current;
+      requestAnimationFrame(update);
+    };
+    update();
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach((c) => observer.observe(c));
+})();
+
+// Portfolio Lightbox
+(function() {
+  const lightbox = document.createElement('div');
+  lightbox.className = 'portfolio-lightbox';
+  lightbox.innerHTML = '<button class="lightbox-close" aria-label="Close">&times;</button><img src="" alt="Enlarged portfolio image">';
+  document.body.appendChild(lightbox);
+
+  const lightboxImg = lightbox.querySelector('img');
+  const lightboxClose = lightbox.querySelector('.lightbox-close');
+
+  document.querySelectorAll('.portfolio-item').forEach((item) => {
+    item.addEventListener('click', () => {
+      const img = item.querySelector('img');
+      if (img) {
+        lightboxImg.src = img.src;
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+
+  const closeLightbox = () => {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  };
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+})();
 
 // Contact Form Validation
 document.getElementById('contactForm').addEventListener('submit', (e) => {
