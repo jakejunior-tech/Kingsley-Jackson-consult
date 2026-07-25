@@ -59,3 +59,53 @@ try {
 } catch (e) {
   console.warn('Bootstrap dropdown handlers failed:', e);
 }
+
+// FAQ Accordion
+document.querySelectorAll('.faq-question').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const answer = btn.nextElementSibling;
+    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+    document.querySelectorAll('.faq-question').forEach((b) => {
+      b.setAttribute('aria-expanded', 'false');
+      b.nextElementSibling.classList.remove('open');
+    });
+
+    if (!isOpen) {
+      btn.setAttribute('aria-expanded', 'true');
+      answer.classList.add('open');
+    }
+  });
+});
+
+// Contact Form Validation
+document.getElementById('contactForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const form = e.target;
+  let valid = true;
+
+  form.querySelectorAll('[required]').forEach((field) => {
+    field.style.borderColor = '';
+    if (!field.value.trim()) {
+      field.style.borderColor = '#e74c3c';
+      valid = false;
+    }
+  });
+
+  const email = form.querySelector('#formEmail');
+  if (email.value.trim() && !email.value.includes('@')) {
+    email.style.borderColor = '#e74c3c';
+    valid = false;
+  }
+
+  if (valid) {
+    const btn = form.querySelector('button[type="submit"]');
+    btn.textContent = 'Message Sent!';
+    btn.style.backgroundColor = '#27ae60';
+    setTimeout(() => {
+      btn.textContent = 'Send Message';
+      btn.style.backgroundColor = '';
+      form.reset();
+    }, 3000);
+  }
+});

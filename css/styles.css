@@ -519,6 +519,189 @@ body {
   margin: 0;
 }
 
+/* ===== STATS ===== */
+.stats-section {
+  padding: 60px 0;
+  background-color: var(--dark);
+  color: var(--white);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.stat-item i {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+}
+
+.stat-item h3 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+  color: var(--white);
+}
+
+.stat-item p {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ===== FAQ ===== */
+.faq-section {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+.faq-section h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: var(--dark);
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.faq-item {
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: var(--radius);
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+  background: var(--light-bg);
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark);
+  cursor: pointer;
+  text-align: left;
+  transition: background-color var(--transition);
+}
+
+.faq-question:hover {
+  background: var(--primary-light);
+}
+
+.faq-question i {
+  transition: transform var(--transition);
+  color: var(--primary);
+}
+
+.faq-question[aria-expanded="true"] i {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+}
+
+.faq-answer.open {
+  max-height: 300px;
+}
+
+.faq-answer p {
+  padding: 0 24px 18px;
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* ===== CONTACT ===== */
+.contact-section {
+  padding: 80px 0;
+  background-color: var(--light-bg);
+}
+
+.contact-section h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: var(--dark);
+}
+
+.contact-subtitle {
+  text-align: center;
+  color: var(--text-light);
+  margin-bottom: 3rem;
+  font-size: 1.05rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contact-form-wrapper {
+  background: var(--white);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.form-row {
+  margin-bottom: 16px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border-color var(--transition);
+  outline: none;
+}
+
+.form-control:focus {
+  border-color: var(--primary);
+}
+
+textarea.form-control {
+  resize: vertical;
+}
+
+.contact-form .cta-button {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-map-wrapper {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  min-height: 400px;
+  box-shadow: var(--shadow);
+}
+
 .back-to-top {
   position: fixed;
   bottom: 30px;
@@ -571,6 +754,13 @@ body {
   .testimonial-section { padding: 50px 0; }
   .testimonial-section h2 { font-size: 1.75rem; }
 
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .faq-section { padding: 50px 0; }
+  .faq-section h2 { font-size: 1.75rem; }
+  .contact-section { padding: 50px 0; }
+  .contact-section h2 { font-size: 1.75rem; }
+  .contact-grid { grid-template-columns: 1fr; }
+
   .footer-row {
     flex: 0 0 calc(50% - 20px);
   }
@@ -589,6 +779,11 @@ body {
 
   .service-card { padding: 24px 20px; }
   .portfolio-item img { height: 200px; }
+
+  .stats-grid { grid-template-columns: 1fr; }
+  .stat-item h3 { font-size: 2rem; }
+  .contact-form-wrapper { padding: 24px; }
+  .contact-map-wrapper { min-height: 280px; }
 
   .footer-row { flex: 0 0 100%; }
   .footer .container { flex-direction: column; }
