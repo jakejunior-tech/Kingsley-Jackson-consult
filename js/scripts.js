@@ -152,34 +152,16 @@ document.querySelectorAll('.faq-question').forEach((btn) => {
   });
 })();
 
-// Contact Form Validation
+// Contact Form → WhatsApp
 document.getElementById('contactForm').addEventListener('submit', (e) => {
   e.preventDefault();
-  const form = e.target;
-  let valid = true;
 
-  form.querySelectorAll('[required]').forEach((field) => {
-    field.style.borderColor = '';
-    if (!field.value.trim()) {
-      field.style.borderColor = '#e74c3c';
-      valid = false;
-    }
-  });
+  const name = document.getElementById('formName').value.trim();
+  const email = document.getElementById('formEmail').value.trim();
+  const phone = document.getElementById('formPhone').value.trim();
+  const message = document.getElementById('formMessage').value.trim();
 
-  const email = form.querySelector('#formEmail');
-  if (email.value.trim() && !email.value.includes('@')) {
-    email.style.borderColor = '#e74c3c';
-    valid = false;
-  }
+  const text = `*🔔 New Enquiry from Kingsley Jackson Consults website*%0A%0A*Name* ➡ ${encodeURIComponent(name)}%0A*Email* ➡ ${encodeURIComponent(email)}%0A*Phone* ➡ ${encodeURIComponent(phone)}%0A*Message* ➡ ${encodeURIComponent(message)}`;
 
-  if (valid) {
-    const btn = form.querySelector('button[type="submit"]');
-    btn.textContent = 'Message Sent!';
-    btn.style.backgroundColor = '#27ae60';
-    setTimeout(() => {
-      btn.textContent = 'Send Message';
-      btn.style.backgroundColor = '';
-      form.reset();
-    }, 3000);
-  }
+  window.open(`https://wa.me/2348060776650?text=${text}`, '_blank');
 });
