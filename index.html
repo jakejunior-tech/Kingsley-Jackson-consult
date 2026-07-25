@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>King Jack Consult</title>
-  <!-- Include Bootstrap CSS -->
+  <title>King Jack Consults — Estate Surveying & Property Development</title>
+  <meta name="description" content="King Jack Consults — your trusted partner in estate surveying, property valuation, development, and management in Port Harcourt, Nigeria.">
+  <meta name="keywords" content="estate surveying, property valuation, land survey, property management, Port Harcourt, Nigeria, real estate consulting">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <!-- Include Font Awesome CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <!-- Add these links to the head section of your HTML -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <link rel="icon" href="images/logo/logo-1.jpg" type="image/x-icon">
-  <!-- Include your custom CSS -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -30,24 +31,27 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#about" aria-label="About">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#services">Services</a>
+          <a class="nav-link" href="#services" aria-label="Services">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#portfolio">Portfolio</a>
+          <a class="nav-link" href="#portfolio" aria-label="Portfolio">Portfolio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#footer">Contact</a>
+          <a class="nav-link" href="#team" aria-label="Team">Team</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="#contact" aria-label="Contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mailto:kingjackconsults@gmail.com" aria-label="Email us">
             <i class="fas fa-envelope"></i>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="tel:+2348060776650">
+          <a class="nav-link" href="tel:+2348060776650" aria-label="Call us">
             <i class="fas fa-phone-alt"></i>
           </a>
         </li>
@@ -83,44 +87,53 @@
 </section>
 
 <section class="services" id="services">
-    <h2>Our Services</h2>
     <div class="container">
+        <h2>Our Services</h2>
         <div class="service-grid">
             <div class="service-card">
+                <i class="fas fa-chart-line"></i>
                 <h3>Property Valuation</h3>
-                <p>We offer property valuation based on location, condition, and expert assessment. Our experienced surveyors consider factors like land, age, size, and market trends for accurate value estimation..</p>
+                <p>We offer property valuation based on location, condition, and expert assessment. Our experienced surveyors consider factors like land, age, size, and market trends for accurate value estimation.</p>
             </div>
             <div class="service-card">
+                <i class="fas fa-building"></i>
                 <h3>Property Development</h3>
                 <p>We offer comprehensive project solutions—pre-project, implementation, post-commissioning. Experienced in property development, we manage land, design, approvals, construction, management, and sales for your success.</p>
             </div>
             <div class="service-card">
-                <h3>Land Survey/Valuation</h3>
-                <p>As a key player in land development, we specialize in precise measuring and mapping of construction sites. Our skilled engineers leverage this data to create safe and effective designs, capitalizing on the landscape's uniqueness. Our team comprises top-notch professionals in Nigeria.</p>
+                <i class="fas fa-draw-polygon"></i>
+                <h3>Land Survey</h3>
+                <p>As a key player in land development, we specialize in precise measuring and mapping of construction sites. Our skilled engineers leverage this data to create safe and effective designs, capitalizing on the landscape's uniqueness.</p>
             </div>
             <div class="service-card">
+                <i class="fas fa-handshake"></i>
                 <h3>Property Management</h3>
-                <p>We provide a comprehensive fleet of offshore support vessels tailored to the industry's demands. Our vessels ensure seamless operations by delivering technical expertise, supplies, and equipment for offshore projects, including wind turbine repairs, materials transport, and equipment maintenance.</p>
+                <p>We provide comprehensive management solutions for residential and commercial properties. Our team handles maintenance, tenant relations, rent collection, and property optimization to maximize your investment returns.</p>
             </div>
             <div class="service-card">
+                <i class="fas fa-map-marked-alt"></i>
                 <h3>Estate Survey</h3>
                 <p>We provide expert advice on optimal land use and property management. Serving landowners' interests, we devise infrastructure development plans. With expertise in estate management, we handle property maintenance, valuations, and enhance client benefits.</p>
             </div>
             <div class="service-card">
+                <i class="fas fa-briefcase"></i>
                 <h3>Consultancy</h3>
-                <p>We offer professional expertise, advice, services and opinions to people of different classes in the society based on their individual real estate needs and wants</p>
+                <p>We offer professional expertise, advice, services and opinions to people of different classes in the society based on their individual real estate needs and wants.</p>
             </div>
             <div class="service-card">
+                <i class="fas fa-oil-can"></i>
                 <h3>Oil and Gas Consulting</h3>
-                <p>We offer expertise to professionals in upstream, midstream, and downstream sectors. We advise on asset management, acquisition, partnerships, international agreements, financing, and more. Additionally, we contribute to sustainable and inclusive growth through efficient and forward-looking guidance.</p>
+                <p>We offer expertise to professionals in upstream, midstream, and downstream sectors. We advise on asset management, acquisition, partnerships, international agreements, financing, and more.</p>
             </div>
             <div class="service-card">
+                <i class="fas fa-file-invoice-dollar"></i>
                 <h3>Acquisition Compensation</h3>
                 <p>We perform land and property surveys for project-related land acquisition. Our services also include assessing the value of properties for open market sales on behalf of clients.</p>
             </div>
             <div class="service-card">
+                <i class="fas fa-tools"></i>
                 <h3>Installation and Commissioning</h3>
-                <p>We specialize in construction, commissioning, and installation services. We excel in project management, offering EPC or EPCM approaches for integrated engineering, procurement, construction, and management. Our flexible solutions include project management expertise, procurement, construction, or management support as needed to ensure project success.</p>
+                <p>We specialize in construction, commissioning, and installation services. We excel in project management, offering EPC or EPCM approaches for integrated engineering, procurement, construction, and management.</p>
             </div>
         </div>
     </div>
@@ -131,31 +144,29 @@
     <div class="container">
         <div class="portfolio-grid">
             <div class="portfolio-item">
-                <img src="images/portfolio/img-1.jpg" alt="">
-                <h3>Avaliable properties</h3>
+                <img src="images/portfolio/img-1.jpg" alt="Available properties">
+                <div class="portfolio-overlay"><h3>Available Properties</h3></div>
             </div>
             <div class="portfolio-item">
-                <img src="images/portfolio/img-2.jpg" alt="">
-                <h3>Avaliable properties</h3>
+                <img src="images/portfolio/img-2.jpg" alt="Available properties">
+                <div class="portfolio-overlay"><h3>Available Properties</h3></div>
             </div>
             <div class="portfolio-item">
-                <img src="images/portfolio/img-3.jpg" alt="">
-                <h3>Avaliable properties</h3>
+                <img src="images/portfolio/img-3.jpg" alt="Available properties">
+                <div class="portfolio-overlay"><h3>Available Properties</h3></div>
             </div>
             <div class="portfolio-item">
-              <img src="images/portfolio/img-5.jpg" alt="">
-              <h3>Estate surveying</h3>
+              <img src="images/portfolio/img-5.jpg" alt="Estate surveying">
+              <div class="portfolio-overlay"><h3>Estate Surveying</h3></div>
             </div>
             <div class="portfolio-item">
-              <img src="images/portfolio/img-7.jpg" alt="">
-              <h3>Estate surveying</h3>
+              <img src="images/portfolio/img-7.jpg" alt="Estate surveying">
+              <div class="portfolio-overlay"><h3>Estate Surveying</h3></div>
             </div>
             <div class="portfolio-item">
-              <img src="images/portfolio/img-8.jpg" alt="">
-              <h3>Property Inspections</h3>
+              <img src="images/portfolio/img-8.jpg" alt="Property inspections">
+              <div class="portfolio-overlay"><h3>Property Inspections</h3></div>
             </div>
-
-            <!-- Add more portfolio items as needed -->
         </div>
     </div>
 </section>
@@ -165,34 +176,58 @@
   <div class="container">
       <div class="team-grid">
           <div class="team-member">
-              <img src="images/team/member-1.jpg" alt="Team Member 1">
+              <img src="images/team/member-1.jpg" alt="Kingsley Anthony Jackson">
               <h3>Kingsley Anthony Jackson</h3>
               <p>CEO</p>
+              <div class="team-socials">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+              </div>
           </div>
           <div class="team-member">
-              <img src="images/team/member-2.jpg" alt="Team Member 2">
+              <img src="images/team/member-2.jpg" alt="Uduak Israel Robinson">
               <h3>Uduak Israel Robinson</h3>
               <p>Manager</p>
+              <div class="team-socials">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+              </div>
           </div>
           <div class="team-member">
-              <img src="images/team/member-3.jpg" alt="Team Member 3">
+              <img src="images/team/member-3.jpg" alt="Nke-Abasi Asuqwo Okon">
               <h3>Nke-Abasi Asuqwo Okon</h3>
               <p>Secretary</p>
+              <div class="team-socials">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+              </div>
           </div>
           <div class="team-member">
-            <img src="images/team/member-3.jpg" alt="Team Member 3">
+            <img src="images/team/member-3.jpg" alt="Charles Israel">
             <h3>Charles Israel</h3>
             <p>Field Surveyor</p>
+            <div class="team-socials">
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
         </div>
         <div class="team-member">
-          <img src="images/team/member-3.jpg" alt="Team Member 3">
+          <img src="images/team/member-3.jpg" alt="Editoro Akra">
           <h3>Editoro Akra</h3>
           <p>Field Surveyor</p>
+          <div class="team-socials">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
         </div>
         <div class="team-member">
-          <img src="images/team/member-3.jpg" alt="Team Member 3">
+          <img src="images/team/member-3.jpg" alt="Ima Ema">
           <h3>Ima Ema</h3>
           <p>Field Surveyor</p>
+          <div class="team-socials">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
         </div>
             <!-- Add more team members as needed -->
       </div>
@@ -243,10 +278,7 @@
                     </div>
                 </div>
             </div>
-             <!-- Add pagination and navigation if desired 
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div> -->
         </div>
     </div>
 </section>
@@ -256,41 +288,42 @@
       <div class="footer-row">
         <h3>Quick Links</h3>
         <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Portfolio</a></li>
+          <li><a href="#about" aria-label="About">About</a></li>
+          <li><a href="#services" aria-label="Services">Services</a></li>
+          <li><a href="#portfolio" aria-label="Portfolio">Portfolio</a></li>
+          <li><a href="#team" aria-label="Team">Team</a></li>
+          <li><a href="#contact" aria-label="Contact">Contact</a></li>
         </ul>
       </div>
   
       <div class="footer-row">
         <h3>Follow Us</h3>
         <ul class="social-icons">
-          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+          <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
         </ul>
       </div>
   
       <div class="footer-row">
-        <h3>let's Discuss your project</h3>
+        <h3>Let's Discuss Your Project</h3>
         <ul class="contact-info">
           <li><i class="fas fa-map-marker-alt"></i> Port Harcourt, Nigeria</li>
-          <li><a href="tel:+2348060776650"><i class="fas fa-phone-alt"></i></a> +234 (0) 8060776650</li>
-          <li><i class="fas fa-envelope"></i> kingjackconsults@gmail.com</li>
-          <li><a href="https://wa.me/+2348060776650"><i class="fab fa-whatsapp"></i></a> +234 (0) 8060776650</li>
+          <li><a href="tel:+2348060776650" aria-label="Call us"><i class="fas fa-phone-alt"></i> +234 (0) 8060776650</a></li>
+          <li><a href="mailto:kingjackconsults@gmail.com" aria-label="Email us"><i class="fas fa-envelope"></i> kingjackconsults@gmail.com</a></li>
+          <li><a href="https://wa.me/+2348060776650" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i> +234 (0) 8060776650</a></li>
         </ul>
       </div>
-
+  
       <div class="footer-row">
         <h3>King Jack Consults</h3>
-        <p>Delivering quality surveying, property development, tech solutions, management, and consulting for Nigeria's Real Estate and oil & gas sectors.</p>
+        <p>Delivering quality surveying, property development, management, and consulting for Nigeria's Real Estate and oil & gas sectors.</p>
       </div>
     </div>
   
-    <!-- Copyright -->
     <div class="copyright">
       <div class="container">
-        <p>&copy; 2023 King Jack Consults. All rights reserved.</p>
+        <p>&copy; 2026 King Jack Consults. All rights reserved.</p>
       </div>
     </div>
   </footer>

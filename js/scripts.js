@@ -5,33 +5,33 @@ try {
       el: '.swiper-pagination',
       clickable: true,
     },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    slidesPerView: 'auto',
+    slidesPerView: 1,
     spaceBetween: 30,
     autoplay: {
       delay: 5000,
     },
+    breakpoints: {
+      768: { slidesPerView: 1 },
+      992: { slidesPerView: 1 }
+    }
   });
 } catch (e) {
   console.warn('Swiper failed to load:', e);
 }
 
-const backToTopButton = document.querySelector('.back-to-top');
+const backToTop = document.querySelector('.back-to-top');
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 300) {
-    backToTopButton.style.opacity = '1';
-    backToTopButton.style.visibility = 'visible';
+    backToTop.style.opacity = '1';
+    backToTop.style.visibility = 'visible';
   } else {
-    backToTopButton.style.opacity = '0';
-    backToTopButton.style.visibility = 'hidden';
+    backToTop.style.opacity = '0';
+    backToTop.style.visibility = 'hidden';
   }
 });
 
-backToTopButton.addEventListener('click', (e) => {
+backToTop.addEventListener('click', (e) => {
   e.preventDefault();
   window.scrollTo({
     top: 0,
