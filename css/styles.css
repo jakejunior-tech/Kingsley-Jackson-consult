@@ -145,10 +145,23 @@ body {
 }
 
 .about-image {
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  display: block;
+}
+
+.about-carousel {
   border-radius: var(--radius-lg);
+  overflow: hidden;
   box-shadow: var(--shadow);
+}
+
+.about-carousel .carousel-control-prev-icon,
+.about-carousel .carousel-control-next-icon {
+  background-color: rgba(0,0,0,0.35);
+  border-radius: 50%;
+  padding: 24px;
+  background-size: 50%;
 }
 
 .about-content {
