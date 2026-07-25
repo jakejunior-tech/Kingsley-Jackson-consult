@@ -79,7 +79,7 @@ body {
   height: 100vh;
   background-image: url('../images/hero/hero-bg.jpg'), url('../images/hero/4.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: center 10%;
   display: flex;
   align-items: center;
   justify-content: center;
