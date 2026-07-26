@@ -589,22 +589,15 @@ body {
   transform: translateY(-4px);
 }
 
-.partner-item i {
-  font-size: 3rem;
-  color: var(--primary);
-  margin-bottom: 12px;
-  transition: color var(--transition);
+.partner-item img {
+  max-height: 80px;
+  max-width: 140px;
+  object-fit: contain;
+  transition: transform var(--transition);
 }
 
-.partner-item:hover i {
-  color: var(--accent);
-}
-
-.partner-item p {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--dark);
-  margin: 0;
+.partner-item:hover img {
+  transform: scale(1.08);
 }
 
 @keyframes scrollLeft {
