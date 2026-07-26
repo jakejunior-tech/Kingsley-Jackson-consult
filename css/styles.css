@@ -542,6 +542,76 @@ body {
   margin: 0;
 }
 
+/* ===== PARTNERS / CLIENTS ===== */
+.partners-section {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+.partners-section h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: var(--dark);
+}
+
+.partners-wrapper {
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.partners-track {
+  display: flex;
+  gap: 60px;
+  width: fit-content;
+  animation: scrollLeft 30s linear infinite;
+}
+
+.partners-track:hover {
+  animation-play-state: paused;
+}
+
+.partner-item {
+  flex: 0 0 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 10px;
+  transition: transform var(--transition);
+}
+
+.partner-item:hover {
+  transform: translateY(-4px);
+}
+
+.partner-item i {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 12px;
+  transition: color var(--transition);
+}
+
+.partner-item:hover i {
+  color: var(--accent);
+}
+
+.partner-item p {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin: 0;
+}
+
+@keyframes scrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 /* ===== STATS ===== */
 .stats-section {
   padding: 60px 0;
