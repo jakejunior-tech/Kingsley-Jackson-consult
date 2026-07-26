@@ -567,7 +567,7 @@ body {
   display: flex;
   gap: 60px;
   width: fit-content;
-  animation: scrollLeft 30s linear infinite;
+  animation: scrollLeft 10s linear infinite;
 }
 
 .partners-track:hover {
