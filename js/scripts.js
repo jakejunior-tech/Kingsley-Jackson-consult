@@ -152,12 +152,13 @@ document.querySelectorAll('.faq-question').forEach((btn) => {
   });
 })();
 
-// Duplicate partners track for seamless infinite scroll
+// Duplicate partners items for seamless infinite scroll
 (function() {
   const track = document.querySelector('.partners-track');
   if (track) {
-    const clone = track.cloneNode(true);
-    track.parentNode.appendChild(clone);
+    track.querySelectorAll('.partner-item').forEach(item => {
+      track.appendChild(item.cloneNode(true));
+    });
   }
 })();
 
