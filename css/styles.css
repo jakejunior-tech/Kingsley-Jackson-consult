@@ -460,6 +460,96 @@ body {
   background-color: rgba(255,255,255,0.5);
 }
 
+/* Portfolio Swiper */
+.portfolio-swiper {
+  overflow: hidden;
+  position: relative;
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding: 0 50px 40px;
+}
+
+.portfolio-swiper .portfolio-item img {
+  height: 400px;
+}
+
+.portfolio-swiper .swiper-pagination {
+  position: relative;
+  margin-top: 20px;
+}
+
+.portfolio-swiper .swiper-pagination-bullet {
+  background-color: var(--primary);
+  opacity: 0.4;
+}
+
+.portfolio-swiper .swiper-pagination-bullet-active {
+  background-color: var(--primary) !important;
+  opacity: 1;
+}
+
+.portfolio-swiper .swiper-button-next,
+.portfolio-swiper .swiper-button-prev {
+  color: var(--primary);
+  background: var(--white);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+}
+
+.portfolio-swiper .swiper-button-next::after,
+.portfolio-swiper .swiper-button-prev::after {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.portfolio-swiper .swiper-button-next:hover,
+.portfolio-swiper .swiper-button-prev:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+/* Lightbox navigation */
+.portfolio-lightbox .lightbox-prev,
+.portfolio-lightbox .lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.2);
+  color: var(--white);
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.portfolio-lightbox .lightbox-prev { left: 20px; }
+.portfolio-lightbox .lightbox-next { right: 20px; }
+
+.portfolio-lightbox .lightbox-prev:hover,
+.portfolio-lightbox .lightbox-next:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+@media (max-width: 768px) {
+  .portfolio-lightbox .lightbox-prev,
+  .portfolio-lightbox .lightbox-next {
+    width: 44px;
+    height: 44px;
+    font-size: 1.5rem;
+  }
+  .portfolio-lightbox .lightbox-prev { left: 10px; }
+  .portfolio-lightbox .lightbox-next { right: 10px; }
+}
+
 .footer {
   padding: 50px 0 0;
   background-color: var(--dark);

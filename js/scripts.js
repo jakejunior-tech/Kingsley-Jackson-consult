@@ -117,19 +117,60 @@ document.querySelectorAll('.faq-question').forEach((btn) => {
   counters.forEach((c) => observer.observe(c));
 })();
 
-// Portfolio Lightbox
+// Portfolio Swiper
+try {
+  new Swiper('.portfolio-swiper', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: { el: '.swiper-pagination', clickable: true },
+    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
+  });
+} catch (e) {
+  console.warn('Portfolio Swiper failed:', e);
+}
+
+// Portfolio Lightbox with swipe navigation
 (function() {
+  const carouselImages = [];
+  document.querySelectorAll('.portfolio-swiper .portfolio-item img').forEach(img => {
+    carouselImages.push(img.src);
+  });
+
   const lightbox = document.createElement('div');
   lightbox.className = 'portfolio-lightbox';
-  lightbox.innerHTML = '<button class="lightbox-close" aria-label="Close">&times;</button><img src="" alt="Enlarged portfolio image">';
+  lightbox.innerHTML =
+    '<button class="lightbox-close" aria-label="Close">&times;</button>' +
+    '<button class="lightbox-prev" aria-label="Previous">&#8249;</button>' +
+    '<img src="" alt="Enlarged portfolio image">' +
+    '<button class="lightbox-next" aria-label="Next">&#8250;</button>';
   document.body.appendChild(lightbox);
 
   const lightboxImg = lightbox.querySelector('img');
   const lightboxClose = lightbox.querySelector('.lightbox-close');
+  const lightboxPrev = lightbox.querySelector('.lightbox-prev');
+  const lightboxNext = lightbox.querySelector('.lightbox-next');
 
-  document.querySelectorAll('.portfolio-item').forEach((item) => {
+  let currentIndex = 0;
+  let touchStartX = 0;
+
+  function showImage(index) {
+    if (carouselImages.length === 0) return;
+    currentIndex = (index + carouselImages.length) % carouselImages.length;
+    lightboxImg.src = carouselImages[currentIndex];
+  }
+
+  document.querySelectorAll('.portfolio-swiper .portfolio-item').forEach((item, i) => {
     item.addEventListener('click', () => {
-      const img = item.querySelector('img');
+      showImage(i);
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  document.querySelectorAll('.portfolio-grid .portfolio-item').forEach((item) => {
+    item.addEventListener('click', function() {
+      const img = this.querySelector('img');
       if (img) {
         lightboxImg.src = img.src;
         lightbox.classList.add('open');
@@ -143,12 +184,28 @@ document.querySelectorAll('.faq-question').forEach((btn) => {
     document.body.style.overflow = '';
   };
 
+  lightboxPrev.addEventListener('click', () => showImage(currentIndex - 1));
+  lightboxNext.addEventListener('click', () => showImage(currentIndex + 1));
+
+  lightboxImg.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  });
+  lightboxImg.addEventListener('touchend', (e) => {
+    const diff = touchStartX - e.changedTouches[0].screenX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) showImage(currentIndex + 1);
+      else showImage(currentIndex - 1);
+    }
+  });
+
   lightboxClose.addEventListener('click', closeLightbox);
   lightbox.addEventListener('click', (e) => {
     if (e.target === lightbox) closeLightbox();
   });
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
+    if (e.key === 'ArrowRight') showImage(currentIndex + 1);
   });
 })();
 
