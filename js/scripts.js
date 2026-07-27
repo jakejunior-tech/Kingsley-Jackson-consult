@@ -120,7 +120,7 @@ document.querySelectorAll('.faq-question').forEach((btn) => {
 // Portfolio Swiper
 try {
   new Swiper('.portfolio-swiper', {
-    loop: true,
+    loop: false,
     slidesPerView: 1,
     spaceBetween: 20,
     pagination: { el: '.swiper-pagination', clickable: true },
@@ -156,7 +156,7 @@ try {
 
   function showImage(index) {
     if (carouselImages.length === 0) return;
-    currentIndex = (index + carouselImages.length) % carouselImages.length;
+    currentIndex = Math.max(0, Math.min(index, carouselImages.length - 1));
     lightboxImg.src = carouselImages[currentIndex];
   }
 
