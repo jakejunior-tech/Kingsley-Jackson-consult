@@ -125,7 +125,12 @@ try {
     spaceBetween: 20,
     autoplay: { delay: 3000 },
     pagination: { el: '.swiper-pagination', clickable: true },
-    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
+    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+    breakpoints: {
+      576: { slidesPerView: 2, spaceBetween: 15 },
+      768: { slidesPerView: 2, spaceBetween: 20 },
+      992: { slidesPerView: 3, spaceBetween: 20 }
+    }
   });
 } catch (e) {
   console.warn('Portfolio Swiper failed:', e);
