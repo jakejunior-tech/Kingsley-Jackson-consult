@@ -491,20 +491,20 @@ body {
 .portfolio-swiper .swiper-button-next,
 .portfolio-swiper .swiper-button-prev {
   color: var(--primary);
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.45);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
 }
 
 .portfolio-swiper .swiper-button-next::after,
 .portfolio-swiper .swiper-button-prev::after {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
 }
 
