@@ -117,7 +117,7 @@ document.querySelectorAll('.faq-question').forEach((btn) => {
   counters.forEach((c) => observer.observe(c));
 })();
 
-// Portfolio Swiper
+// Portfolio Swiper - Estate Surveying
 try {
   new Swiper('.portfolio-swiper', {
     loop: false,
@@ -135,10 +135,28 @@ try {
   console.warn('Portfolio Swiper failed:', e);
 }
 
+// Portfolio Swiper - Available Properties
+try {
+  new Swiper('.available-swiper', {
+    loop: false,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: { el: '.available-pagination', clickable: true },
+    navigation: { nextEl: '.available-next', prevEl: '.available-prev' },
+    breakpoints: {
+      576: { slidesPerView: 2, spaceBetween: 15 },
+      768: { slidesPerView: 2, spaceBetween: 20 },
+      992: { slidesPerView: 3, spaceBetween: 20 }
+    }
+  });
+} catch (e) {
+  console.warn('Available Swiper failed:', e);
+}
+
 // Portfolio Lightbox with swipe navigation
 (function() {
   const carouselImages = [];
-  document.querySelectorAll('.portfolio-swiper .portfolio-item img').forEach(img => {
+  document.querySelectorAll('.portfolio-swiper .portfolio-item img, .available-swiper .portfolio-item img').forEach(img => {
     carouselImages.push(img.src);
   });
 
@@ -165,7 +183,7 @@ try {
     lightboxImg.src = carouselImages[currentIndex];
   }
 
-  document.querySelectorAll('.portfolio-swiper .portfolio-item').forEach((item, i) => {
+  document.querySelectorAll('.portfolio-swiper .portfolio-item, .available-swiper .portfolio-item').forEach((item, i) => {
     item.addEventListener('click', () => {
       showImage(i);
       lightbox.classList.add('open');

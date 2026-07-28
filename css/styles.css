@@ -461,7 +461,8 @@ body {
 }
 
 /* Portfolio Swiper */
-.portfolio-swiper {
+.portfolio-swiper,
+.available-swiper {
   overflow: hidden;
   position: relative;
   max-width: 1200px;
@@ -469,27 +470,33 @@ body {
   padding: 0 50px 40px;
 }
 
-.portfolio-swiper .portfolio-item img {
+.portfolio-swiper .portfolio-item img,
+.available-swiper .portfolio-item img {
   height: 400px;
 }
 
-.portfolio-swiper .swiper-pagination {
+.portfolio-swiper .swiper-pagination,
+.available-swiper .swiper-pagination {
   position: relative;
   margin-top: 20px;
 }
 
-.portfolio-swiper .swiper-pagination-bullet {
+.portfolio-swiper .swiper-pagination-bullet,
+.available-swiper .swiper-pagination-bullet {
   background-color: var(--primary);
   opacity: 0.4;
 }
 
-.portfolio-swiper .swiper-pagination-bullet-active {
+.portfolio-swiper .swiper-pagination-bullet-active,
+.available-swiper .swiper-pagination-bullet-active {
   background-color: var(--primary) !important;
   opacity: 1;
 }
 
 .portfolio-swiper .swiper-button-next,
-.portfolio-swiper .swiper-button-prev {
+.portfolio-swiper .swiper-button-prev,
+.available-swiper .swiper-button-next,
+.available-swiper .swiper-button-prev {
   color: var(--primary);
   background: rgba(255, 255, 255, 0.45);
   backdrop-filter: blur(4px);
@@ -503,13 +510,17 @@ body {
 }
 
 .portfolio-swiper .swiper-button-next::after,
-.portfolio-swiper .swiper-button-prev::after {
+.portfolio-swiper .swiper-button-prev::after,
+.available-swiper .swiper-button-next::after,
+.available-swiper .swiper-button-prev::after {
   font-size: 18px;
   font-weight: 700;
 }
 
 .portfolio-swiper .swiper-button-next:hover,
-.portfolio-swiper .swiper-button-prev:hover {
+.portfolio-swiper .swiper-button-prev:hover,
+.available-swiper .swiper-button-next:hover,
+.available-swiper .swiper-button-prev:hover {
   background: rgba(255, 255, 255, 1);
   color: var(--primary);
   transform: scale(1.1);
@@ -995,7 +1006,9 @@ textarea.form-control {
   }
 
   .portfolio-swiper .swiper-button-next,
-  .portfolio-swiper .swiper-button-prev {
+  .portfolio-swiper .swiper-button-prev,
+  .available-swiper .swiper-button-next,
+  .available-swiper .swiper-button-prev {
     top: 38%;
   }
 
