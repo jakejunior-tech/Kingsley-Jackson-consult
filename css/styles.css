@@ -882,6 +882,37 @@ textarea.form-control {
   overflow: hidden;
   min-height: 400px;
   box-shadow: var(--shadow);
+  position: relative;
+}
+
+.open-map-link {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  color: var(--primary);
+  padding: 10px 18px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.open-map-link:hover {
+  background: var(--primary);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.open-map-link i {
+  margin-right: 6px;
 }
 
 /* ===== PORTFOLIO LIGHTBOX ===== */
