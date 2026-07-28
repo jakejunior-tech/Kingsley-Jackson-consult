@@ -1031,8 +1031,8 @@ textarea.form-control {
   .services { padding: 50px 0; }
   .services h2 { font-size: 1.75rem; }
   .portfolio { padding: 20px 0 0; }
-  .portfolio h2 { font-size: 1.75rem; margin-bottom: 1.25rem; }
-  .portfolio-subheading { margin: 3px 0 0; }
+  .portfolio h2 { font-size: 1.75rem; margin-bottom: 0.75rem; }
+  .portfolio-subheading { margin: -5px 0 0; }
   .available-swiper { padding-bottom: 0; }
   .portfolio-swiper { margin-top: 0; padding-bottom: 0; }
   .team-section { padding: 50px 0; }
