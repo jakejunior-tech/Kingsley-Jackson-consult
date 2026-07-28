@@ -635,6 +635,20 @@ body {
   margin-right: 12px;
 }
 
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: background var(--transition), color var(--transition);
+}
+
+.social-icons a:hover {
+  background: rgba(255,255,255,0.1);
+}
+
 .social-icons a i {
   font-size: 1.3rem;
   transition: color var(--transition);
