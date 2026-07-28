@@ -4,7 +4,7 @@ try {
 } catch (e) { console.warn('AOS failed:', e); }
 
 try {
-  var swiper = new Swiper('.swiper-container', {
+  var swiper = new Swiper('.testimonial-section .swiper-container', {
     loop: true,
     pagination: {
       el: '.swiper-pagination',
