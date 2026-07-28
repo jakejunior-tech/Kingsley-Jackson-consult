@@ -269,7 +269,7 @@ body {
   color: var(--white);
   font-size: 1.5rem;
   font-weight: 600;
-  margin: 40px 0 0;
+  margin: 15px 0 10px;
   opacity: 0.9;
 }
 
@@ -475,8 +475,15 @@ body {
   overflow: hidden;
   position: relative;
   max-width: 1200px;
-  margin: 40px auto 0;
   padding: 0 50px 40px;
+}
+
+.available-swiper {
+  margin: 40px auto 0;
+}
+
+.portfolio-swiper {
+  margin: 5px auto 0;
 }
 
 .portfolio-swiper .portfolio-item img,
