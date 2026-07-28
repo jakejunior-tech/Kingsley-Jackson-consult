@@ -1030,8 +1030,11 @@ textarea.form-control {
 
   .services { padding: 50px 0; }
   .services h2 { font-size: 1.75rem; }
-  .portfolio { padding: 50px 0; }
-  .portfolio h2 { font-size: 1.75rem; }
+  .portfolio { padding: 30px 0; }
+  .portfolio h2 { font-size: 1.75rem; margin-bottom: 1.5rem; }
+  .portfolio-subheading { margin-top: 5px; }
+  .available-swiper { padding-bottom: 15px; }
+  .portfolio-swiper { margin-top: 2px; padding-bottom: 25px; }
   .team-section { padding: 50px 0; }
   .team-section h2 { font-size: 1.75rem; }
   .testimonial-section { padding: 50px 0; }
