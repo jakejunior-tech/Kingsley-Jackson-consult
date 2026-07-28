@@ -994,6 +994,11 @@ textarea.form-control {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .portfolio-swiper .swiper-button-next,
+  .portfolio-swiper .swiper-button-prev {
+    top: 38%;
+  }
+
   .services { padding: 50px 0; }
   .services h2 { font-size: 1.75rem; }
   .portfolio { padding: 50px 0; }
