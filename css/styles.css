@@ -289,16 +289,6 @@ body {
   transition: transform 0.5s ease;
 }
 
-.portfolio-video {
-  overflow: hidden;
-}
-
-.portfolio-video video {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  display: block;
-}
 
 .portfolio-item:hover img {
   transform: scale(1.1);
