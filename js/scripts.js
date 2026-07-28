@@ -117,6 +117,17 @@ document.querySelectorAll('.faq-question').forEach((btn) => {
   counters.forEach((c) => observer.observe(c));
 })();
 
+// About Swiper
+try {
+  new Swiper('.about-swiper', {
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '.swiper-pagination', clickable: true }
+  });
+} catch (e) {
+  console.warn('About Swiper failed:', e);
+}
+
 // Portfolio Swiper - Estate Surveying
 try {
   new Swiper('.portfolio-swiper', {
