@@ -58,6 +58,12 @@ body {
   margin-right: 10px;
 }
 
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 1rem;
+  }
+}
+
 .navbar-nav .nav-link {
   color: var(--dark) !important;
   font-weight: 500;
@@ -739,14 +745,19 @@ body {
 }
 
 .partner-item img {
-  max-height: 80px;
-  max-width: 140px;
+  max-height: 90px;
+  max-width: 160px;
   object-fit: contain;
-  transition: transform var(--transition);
+  background: var(--white);
+  padding: 8px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
 }
 
 .partner-item:hover img {
   transform: scale(1.08);
+  box-shadow: var(--shadow);
 }
 
 @keyframes scrollLeft {
