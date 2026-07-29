@@ -721,7 +721,7 @@ body {
 .partners-track {
   display: flex;
   width: fit-content;
-  animation: scrollLeft 10s linear infinite;
+  animation: scrollLeft 15s linear infinite;
 }
 
 .partners-track:hover {
